@@ -12,10 +12,10 @@ class CygnusMenumanagerGrailsPlugin {
 
     // TODO Fill in these fields
     def title = "Cygnus Menumanager Plugin" // Headline display name of the plugin
-    def author = "Your name"
-    def authorEmail = ""
+    def author = "Haris Ibrahim"
+    def authorEmail = "clerecudzio@gmail.com"
     def description = '''\
-Brief summary/description of the plugin.
+Plugin for managing menu in Cygnus Framework
 '''
 
     // URL to the plugin's documentation
