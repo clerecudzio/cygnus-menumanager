@@ -35,3 +35,4 @@ grails.project.dependency.resolution = {
         }
     }
 }
+grails.plugin.location.'cygnus-usermanagement' = "../cygnus-usermanagement"
