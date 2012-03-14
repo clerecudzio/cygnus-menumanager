@@ -11,12 +11,12 @@ class STMenu implements Serializable {
 	int menuLevel
 	Authorities authority
 	String menuPath
-	STMenu parentMenu
+	String parentMenu
 	String action
 	String controller
 
 	static mapping = { table 'sys_t_menu' 
-					   id composite:['controller','action']
+					   id composite:['menuCode','controller','action']
 					   }
 
 	static constraints = {
