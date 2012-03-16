@@ -34,9 +34,9 @@
 				<g:each in="${SRGroupMenuInstanceList}" status="i" var="SRGroupMenuInstance">
 					<tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
 					
-						<td><g:link action="show" id="${SRGroupMenuInstance.id}">${fieldValue(bean: SRGroupMenuInstance, field: "menu")}</g:link></td>
+						<td><g:link action="show" id="${SRGroupMenuInstance.id}">${fieldValue(bean: SRGroupMenuInstance, field: "menu.menuCode")}</g:link></td>
 					
-						<td>${fieldValue(bean: SRGroupMenuInstance, field: "menuGroup")}</td>
+						<td>${fieldValue(bean: SRGroupMenuInstance, field: "menuGroup.menuGroupName")}</td>
 					
 					</tr>
 				</g:each>

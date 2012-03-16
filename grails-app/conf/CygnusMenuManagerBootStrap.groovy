@@ -40,15 +40,15 @@ class CygnusMenuManagerBootStrap {
 				/**
 				 * Generate to SRGroupMenu
 				 */
-				new SRGroupMenu(menu:STMenu.findByMenuCode('home')?:new STMenu(menuCode:'home',controller: '#',action:'#',packageName:'#',menuLevel:0).save(failOnError:true)
+				new SRGroupMenu(menu:STMenu.findByMenuCode('home')?:new STMenu(menuCode:'home',controller: '#',action:'#',packageName:'#',menuOrder:1).save(failOnError:true)
 						,menuGroup:STMenuGroup.findByMenuGroupName('mainMenu')).save(failOnError:true)
-				new SRGroupMenu(menu:STMenu.findByMenuCode('userManagement')?:new STMenu(menuCode:'userManagement',controller: '#',action:'#',packageName:'#',menuLevel:0).save(failOnError:true)
+				new SRGroupMenu(menu:STMenu.findByMenuCode('userManagement')?:new STMenu(menuCode:'userManagement',controller: '#',action:'#',packageName:'#',menuOrder:3).save(failOnError:true)
 						,menuGroup:STMenuGroup.findByMenuGroupName('mainMenu')).save(failOnError:true)
-				new SRGroupMenu(menu:STMenu.findByMenuCode('contentManagement')?:new STMenu(menuCode:'contentManagement',controller: '#',action:'#',packageName:'#',menuLevel:0).save(failOnError:true)
+				new SRGroupMenu(menu:STMenu.findByMenuCode('contentManagement')?:new STMenu(menuCode:'contentManagement',controller: '#',action:'#',packageName:'#',menOrder:2).save(failOnError:true)
 						,menuGroup:STMenuGroup.findByMenuGroupName('mainMenu')).save(failOnError:true)
-				new SRGroupMenu(menu:STMenu.findByMenuCode('about')?:new STMenu(menuCode:'about',controller: '#',action:'#',packageName:'#',menuLevel:0).save(failOnError:true)
+				new SRGroupMenu(menu:STMenu.findByMenuCode('about')?:new STMenu(menuCode:'about',controller: '#',action:'#',packageName:'#',menuOrder:4).save(failOnError:true)
 						,menuGroup:STMenuGroup.findByMenuGroupName('mainMenu')).save(failOnError:true)
-				new SRGroupMenu(menu:STMenu.findByMenuCode('systemConfiguration')?:new STMenu(menuCode:'systemConfiguration',controller: '#',action:'#',packageName:'#',menuLevel:0).save(failOnError:true)
+				new SRGroupMenu(menu:STMenu.findByMenuCode('systemConfiguration')?:new STMenu(menuCode:'systemConfiguration',controller: '#',action:'#',packageName:'#',menuOrder:1).save(failOnError:true)
 						,menuGroup:STMenuGroup.findByMenuGroupName('systemMenu')).save(failOnError:true)
 
 

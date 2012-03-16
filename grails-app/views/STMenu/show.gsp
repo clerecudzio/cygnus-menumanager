@@ -77,11 +77,11 @@
 				</li>
 				</g:if>
 			
-				<g:if test="${STMenuInstance?.menuLevel}">
+				<g:if test="${STMenuInstance?.menuOrder}">
 				<li class="fieldcontain">
-					<span id="menuLevel-label" class="property-label"><g:message code="STMenu.menuLevel.label" default="Menu Level" /></span>
+					<span id="menuOrder-label" class="property-label"><g:message code="STMenu.menuOrder.label" default="Menu Order" /></span>
 					
-						<span class="property-value" aria-labelledby="menuLevel-label"><g:fieldValue bean="${STMenuInstance}" field="menuLevel"/></span>
+						<span class="property-value" aria-labelledby="menuOrder-label"><g:fieldValue bean="${STMenuInstance}" field="menuOrder"/></span>
 					
 				</li>
 				</g:if>

@@ -8,9 +8,7 @@ class GenerateMenuController {
 							STMenuGroupPos.findByMenuPositionName(params.pos)
 							)
 						  )
-		headerList.each{ headerNode ->
-			
-		}
+		
 		
 		render(view:'showHeader',model:[HeaderMenuList:headerList])
 	}
@@ -18,7 +16,6 @@ class GenerateMenuController {
 	
 	
 	def showDetail(){
-		log.info "finding sub menu of ${params.parentMenuCode}"
 		def detailList = STMenu.findAllByParentMenu(params.parentMenuCode)
 		[MenuDetailList : detailList]
 		

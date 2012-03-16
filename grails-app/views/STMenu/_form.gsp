@@ -23,7 +23,7 @@
 		<g:message code="STMenu.authority.label" default="Authority" />
 		
 	</label>
-	<g:select id="authority" name="authority.id" from="${com.cygnus.sys.umgt.Authorities.list()}" optionKey="id" value="${STMenuInstance?.authority?.id}" class="many-to-one" noSelection="['null': '']"/>
+	<g:select id="authority" name="authority.id" from="${com.cygnus.sys.umgt.Authorities.list()}" optionKey="id" value="${STMenuInstance?.authority?.id}" class="many-to-one" noSelection="['null': '']" optionValue="authority"/>
 </div>
 
 <div class="fieldcontain ${hasErrors(bean: STMenuInstance, field: 'action', 'error')} ">
@@ -50,12 +50,12 @@
 	<g:textField name="controller" value="${STMenuInstance?.controller}"/>
 </div>
 
-<div class="fieldcontain ${hasErrors(bean: STMenuInstance, field: 'menuLevel', 'error')} required">
-	<label for="menuLevel">
-		<g:message code="STMenu.menuLevel.label" default="Menu Level" />
+<div class="fieldcontain ${hasErrors(bean: STMenuInstance, field: 'menuOrder', 'error')} required">
+	<label for="menuOrder">
+		<g:message code="STMenu.menuOrder.label" default="Menu Order" />
 		<span class="required-indicator">*</span>
 	</label>
-	<g:field type="number" name="menuLevel" required="" value="${fieldValue(bean: STMenuInstance, field: 'menuLevel')}"/>
+	<g:field type="number" name="menuOrder" required="" value="${fieldValue(bean: STMenuInstance, field: 'menuOrder')}"/>
 </div>
 
 <div class="fieldcontain ${hasErrors(bean: STMenuInstance, field: 'packageName', 'error')} ">

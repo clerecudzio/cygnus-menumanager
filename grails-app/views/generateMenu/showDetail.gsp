@@ -1,3 +1,4 @@
+<g:if test="${MenuDetailList.size > 0 }">
 <ul>
 	<g:each in="${MenuDetailList}" status="i" var="detailInstance">
 		<li>
@@ -6,3 +7,4 @@
 		</li>
 	</g:each>
 </ul>
+</g:if>

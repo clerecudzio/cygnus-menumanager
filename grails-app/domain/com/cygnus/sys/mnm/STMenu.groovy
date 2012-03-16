@@ -2,13 +2,14 @@ package com.cygnus.sys.mnm
 
 import com.cygnus.sys.mnm.STMenu;
 import com.cygnus.sys.umgt.Authorities
+import com.sun.xml.internal.ws.client.sei.ResponseBuilder.Composite;
 
 class STMenu implements Serializable {
 
 
 	String menuCode
 	String packageName
-	int menuLevel
+	int menuOrder
 	Authorities authority
 	String menuPath
 	String parentMenu
@@ -16,7 +17,8 @@ class STMenu implements Serializable {
 	String controller
 
 	static mapping = { table 'sys_t_menu' 
-					   id composite:['menuCode','controller','action']
+					   orderBy :['menuOrder','menuCode','packageName']
+					   
 					   }
 
 	static constraints = {
