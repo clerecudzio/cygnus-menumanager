@@ -49,7 +49,7 @@ class CygnusMenuManagerBootStrap {
 				new SRGroupMenu(menu:STMenu.findByMenuCode('about')?:new STMenu(menuCode:'about',controller: '#',action:'#',packageName:'#',menuOrder:4).save(failOnError:true)
 						,menuGroup:STMenuGroup.findByMenuGroupName('mainMenu')).save(failOnError:true)
 				new SRGroupMenu(menu:STMenu.findByMenuCode('systemConfiguration')?:new STMenu(menuCode:'systemConfiguration',controller: '#',action:'#',packageName:'#',menuOrder:1).save(failOnError:true)
-						,menuGroup:STMenuGroup.findByMenuGroupName('systemMenu')).save(failOnError:true)
+						,menuGroup:STMenuGroup.findByMenuGroupName('mainMenu')).save(failOnError:true)
 
 
 				grailsApplication.controllerClasses.each{ gc ->

@@ -1,3 +1,4 @@
+
 class CygnusMenumanagerGrailsPlugin {
     // the plugin version
     def version = "0.1"
@@ -44,6 +45,7 @@ Plugin for managing menu in Cygnus Framework
 
     def doWithSpring = {
         // TODO Implement runtime spring config (optional)
+		
     }
 
     def doWithDynamicMethods = { ctx ->

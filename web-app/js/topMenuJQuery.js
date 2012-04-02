@@ -33,3 +33,16 @@ stuHover = function() {
 }
 if (window.attachEvent) window.attachEvent("onload", stuHover);
 
+/**
+ * 
+ * Javascript event for handling top Menu on click event
+ */
+$("#nav ul li *").click(function(){
+		var objectUrl = $(this).attr('href'); 
+		$("#spinner").addClass("ui-widget-overlay");
+		$("#spinner").dialog('open');
+		$("#pageContent").load(objectUrl);
+		
+			return false;
+		}
+	);

@@ -80,7 +80,7 @@ way to fit your requirements.
 	padding:3px;
 	border:1px solid #0054a6;
 	white-space:nowrap;
-	width:90px;
+	width:auto;
 	height:auto;
 	z-index:300;
 }
@@ -96,7 +96,7 @@ way to fit your requirements.
 	display:block;
 	font-size:11px;
 	height:18px;
-	width:88px;
+	width:auto;
 	line-height:18px;
 	text-indent:5px;
 	color:#fff;
@@ -106,11 +106,15 @@ way to fit your requirements.
 #nav li ul.sub li a.fly {
 	background:#08a2e6 url(../../images/topmenu/arrow.gif) 80px 6px no-repeat;
 }
+/**
 #nav li:hover ul.sub li a:hover {
 	background:#0f8cc3;
 	color:#fff;
 	border-color:#0054a6;
+	width:auto;
+	
 }
+**/
 #nav li:hover ul.sub li a.fly:hover {
 	background:#0f8cc3 url(../../images/topmenu/arrow_over.gif) 80px 6px no-repeat;
 	color:#fff;
@@ -122,7 +126,7 @@ way to fit your requirements.
 	padding:3px;
 	border:1px solid #0054a6;
 	white-space:nowrap;
-	width:90px;
+	width:auto;
 	z-index:400;
 	height:auto;
 }

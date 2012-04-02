@@ -22,11 +22,12 @@ class STMenu implements Serializable {
 					   }
 
 	static constraints = {
-		menuCode unique:true
+		menuCode unique:true,nullable:false
 		menuPath nullable:true
 		authority nullable:true
 		action nullable:true
 		parentMenu nullable:true
+		
 		
 	}
 

@@ -36,3 +36,4 @@ grails.project.dependency.resolution = {
     }
 }
 grails.plugin.location.'cygnus-usermanagement' = "../cygnus-usermanagement"
+grails.plugin.location.'cygnus-templateEngine' = "../cygnus-templateEngine"
