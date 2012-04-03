@@ -8,15 +8,15 @@
 	value="${message(code: 'STMenu.label', default: 'STMenu')}" />
 <title><g:message code="default.list.label" args="[entityName]" /></title>
 </head>
-<body>
-	<g:form method="POST">
+<body> 
+	<g:formRemote name="showSearchForm" update="pageContent" url="[controller:'STMenu', action:'cygnusFilteredSearch']">
 		<g:include action="generateSearch" controller="universalSearch"
 			params="[dcName:'STMenu',
 					strings:[01:['menuCode','controller'],
 							 02:['parentMenu','menuPath']],
 					string:[01:['packageName']]
 							]" />
-	</g:form>
+	</g:formRemote>
 
 	<div class="nav" role="navigation">
 		<ul>

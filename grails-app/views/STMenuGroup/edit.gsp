@@ -13,6 +13,7 @@
 			<ul>
 				<li><g:link class="list" action="list"><g:message code="default.list.label" args="[entityName]" /></g:link></li>
 				<li><g:link class="create" action="create"><g:message code="default.new.label" args="[entityName]" /></g:link></li>
+				
 			</ul>
 		</div>
 		<div id="edit-STMenuGroup" class="content scaffold-edit" role="main">
@@ -27,7 +28,7 @@
 				</g:eachError>
 			</ul>
 			</g:hasErrors>
-			<g:form method="post" >
+			<g:formRemote name="cygnusSTMenuGroupEditForm" update="pageContent" url="[controller:'STMenuGroup', action:'save']" method="post" >
 				<g:hiddenField name="id" value="${STMenuGroupInstance?.id}" />
 				<g:hiddenField name="version" value="${STMenuGroupInstance?.version}" />
 				<fieldset class="form">
@@ -35,9 +36,9 @@
 				</fieldset>
 				<fieldset class="buttons">
 					<g:actionSubmit class="save" action="update" value="${message(code: 'default.button.update.label', default: 'Update')}" />
-					<g:actionSubmit class="delete" action="delete" value="${message(code: 'default.button.delete.label', default: 'Delete')}" formnovalidate="" onclick="return confirm('${message(code: 'default.button.delete.confirm.message', default: 'Are you sure?')}');" />
+					<g:submitToRemote update="pageContent" class="delete" action="delete" value="${message(code: 'default.button.delete.label', default: 'Delete')}" formnovalidate=""  />
 				</fieldset>
-			</g:form>
+			</g:formRemote>
 		</div>
 	</body>
 </html>

@@ -34,15 +34,15 @@ stuHover = function() {
 if (window.attachEvent) window.attachEvent("onload", stuHover);
 
 /**
- * 
+ * blocked already added on all <a> on cygnus-functions.js
  * Javascript event for handling top Menu on click event
- */
+ 
 $("#nav ul li *").click(function(){
 		var objectUrl = $(this).attr('href'); 
-		$("#spinner").addClass("ui-widget-overlay");
-		$("#spinner").dialog('open');
-		$("#pageContent").load(objectUrl);
-		
-			return false;
+		openUrl(objectUrl);
+		return false;
 		}
+
 	);
+
+*/
