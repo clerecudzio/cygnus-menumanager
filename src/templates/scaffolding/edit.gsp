@@ -28,7 +28,7 @@
 				</g:eachError>
 			</ul>
 			</g:hasErrors>
-			<g:formRemote name="cygnus${domainClass.propertyName}EditForm" update="pageContent" url="[controller:'${domainClass.propertyName}', action:'save']" method="post" <%= multiPart ? ' enctype="multipart/form-data"' : '' %>>
+			<g:formRemote name="cygnus${domainClass.propertyName}EditForm" update="pageContent" url="[controller:'${domainClass.propertyName}', action:'update']" method="post" <%= multiPart ? ' enctype="multipart/form-data"' : '' %>>
 				<g:hiddenField name="id" value="\${${propertyName}?.id}" />
 				<g:hiddenField name="version" value="\${${propertyName}?.version}" />
 				<fieldset class="form">

@@ -28,7 +28,7 @@
 				</g:eachError>
 			</ul>
 			</g:hasErrors>
-			<g:formRemote name="cygnusSTMenuGroupPosEditForm" update="pageContent" url="[controller:'STMenuGroupPos', action:'save']" method="post" >
+			<g:formRemote name="cygnusSTMenuGroupPosEditForm" update="pageContent" url="[controller:'STMenuGroupPos', action:'update']" method="post" >
 				<g:hiddenField name="id" value="${STMenuGroupPosInstance?.id}" />
 				<g:hiddenField name="version" value="${STMenuGroupPosInstance?.version}" />
 				<fieldset class="form">

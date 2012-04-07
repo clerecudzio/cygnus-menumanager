@@ -9,11 +9,10 @@
 <title><g:message code="default.list.label" args="[entityName]" /></title>
 </head>
 <body> 
-	<g:formRemote name="showSearchForm" update="pageContent" url="[controller:'STMenu', action:'cygnusFilteredSearch']">
+	<g:formRemote name="showSearchForm" onFailure="handleError(XMLHttpRequest,textStatus,errorThrown);" update="pageContent" url="[controller:'STMenu', action:'cygnusFilteredSearch']">
 		<g:include action="generateSearch" controller="universalSearch"
 			params="[dcName:'STMenu',
-					strings:[01:['menuCode','controller'],
-							 02:['parentMenu','menuPath']],
+					strings:[01:['menuCode','controller']],
 					string:[01:['packageName']]
 							]" />
 	</g:formRemote>

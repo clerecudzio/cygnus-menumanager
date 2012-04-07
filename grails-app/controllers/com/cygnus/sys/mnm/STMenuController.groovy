@@ -116,9 +116,10 @@ class STMenuController {
 	
 	def cygnusFilteredSearch(){
 		params.max = Math.min(params.max ? params.int('max') : 10, 100)
-		
 		log.info "params = "+params.toString();
 		def result = universalSearchService.generateResult(params)
 		render (view:"list",model: [STMenuInstanceList: result.resultList, STMenuInstanceTotal: result.resultListSize])
+		
+		
 	}
 }
