@@ -24,11 +24,13 @@
 			</g:if>
 			<ol class="property-list STMenuGroupPos">
 			
-				<g:if test="${STMenuGroupPosInstance?.menuPositionName}">
+				<g:if test="${STMenuGroupPosInstance?.groupMenus}">
 				<li class="fieldcontain">
-					<span id="menuPositionName-label" class="property-label"><g:message code="STMenuGroupPos.menuPositionName.label" default="Menu Position Name" /></span>
+					<span id="groupMenus-label" class="property-label"><g:message code="STMenuGroupPos.groupMenus.label" default="Group Menus" /></span>
 					
-						<span class="property-value" aria-labelledby="menuPositionName-label"><g:fieldValue bean="${STMenuGroupPosInstance}" field="menuPositionName"/></span>
+						<g:each in="${STMenuGroupPosInstance.groupMenus}" var="g">
+						<span class="property-value" aria-labelledby="groupMenus-label"><g:link controller="STMenuGroup" action="show" id="${g.id}">${g?.encodeAsHTML()}</g:link></span>
+						</g:each>
 					
 				</li>
 				</g:if>
@@ -38,6 +40,15 @@
 					<span id="allowMoreThanOne-label" class="property-label"><g:message code="STMenuGroupPos.allowMoreThanOne.label" default="Allow More Than One" /></span>
 					
 						<span class="property-value" aria-labelledby="allowMoreThanOne-label"><g:formatBoolean boolean="${STMenuGroupPosInstance?.allowMoreThanOne}" /></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${STMenuGroupPosInstance?.menuPositionName}">
+				<li class="fieldcontain">
+					<span id="menuPositionName-label" class="property-label"><g:message code="STMenuGroupPos.menuPositionName.label" default="Menu Position Name" /></span>
+					
+						<span class="property-value" aria-labelledby="menuPositionName-label"><g:fieldValue bean="${STMenuGroupPosInstance}" field="menuPositionName"/></span>
 					
 				</li>
 				</g:if>

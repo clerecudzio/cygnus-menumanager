@@ -25,9 +25,9 @@
 				<thead>
 					<tr>
 					
-						<g:sortableColumn property="menuPositionName" params="${params}" title="${message(code: 'STMenuGroupPos.menuPositionName.label', default: 'Menu Position Name')}"  />
-					
 						<g:sortableColumn property="allowMoreThanOne" params="${params}" title="${message(code: 'STMenuGroupPos.allowMoreThanOne.label', default: 'Allow More Than One')}"  />
+					
+						<g:sortableColumn property="menuPositionName" params="${params}" title="${message(code: 'STMenuGroupPos.menuPositionName.label', default: 'Menu Position Name')}"  />
 					
 					</tr>
 				</thead>
@@ -35,9 +35,9 @@
 				<g:each in="${STMenuGroupPosInstanceList}" status="i" var="STMenuGroupPosInstance">
 					<tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
 					
-						<td><g:link action="show" id="${STMenuGroupPosInstance.id}">${fieldValue(bean: STMenuGroupPosInstance, field: "menuPositionName")}</g:link></td>
+						<td><g:link action="show" id="${STMenuGroupPosInstance.id}">${fieldValue(bean: STMenuGroupPosInstance, field: "allowMoreThanOne")}</g:link></td>
 					
-						<td><g:formatBoolean boolean="${STMenuGroupPosInstance.allowMoreThanOne}" /></td>
+						<td>${fieldValue(bean: STMenuGroupPosInstance, field: "menuPositionName")}</td>
 					
 					</tr>
 				</g:each>

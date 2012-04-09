@@ -23,7 +23,7 @@
 		<g:message code="STMenu.authority.label" default="Authority" />
 		
 	</label>
-	<g:select id="authority" name="authority.id" from="${com.cygnus.sys.umgt.Authorities.list()}" optionKey="id" value="${STMenuInstance?.authority?.id}" class="many-to-one" noSelection="['null': '']" optionValue="authority"/>
+	<g:select id="authority" name="authority.id" from="${com.cygnus.sys.umgt.Authorities.list()}" optionKey="id" value="${STMenuInstance?.authority?.id}" class="many-to-one" noSelection="['null': '']"/>
 </div>
 
 <div class="fieldcontain ${hasErrors(bean: STMenuInstance, field: 'action', 'error')} ">
@@ -39,7 +39,7 @@
 		<g:message code="STMenu.parentMenu.label" default="Parent Menu" />
 		
 	</label>
-	<g:textField name="parentMenu" value="${STMenuInstance?.parentMenu}"/>
+	<g:select id="parentMenu" name="parentMenu.id" from="${com.cygnus.sys.mnm.STMenu.list()}" optionKey="id" value="${STMenuInstance?.parentMenu?.id}" class="many-to-one" noSelection="['null': '']"/>
 </div>
 
 <div class="fieldcontain ${hasErrors(bean: STMenuInstance, field: 'controller', 'error')} ">

@@ -18,3 +18,11 @@
 	<g:textField name="menuGroupName" value="${STMenuGroupInstance?.menuGroupName}"/>
 </div>
 
+<div class="fieldcontain ${hasErrors(bean: STMenuGroupInstance, field: 'stMenu', 'error')} ">
+	<label for="stMenu">
+		<g:message code="STMenuGroup.stMenu.label" default="St Menu" />
+		
+	</label>
+	<g:select name="stMenu" from="${com.cygnus.sys.mnm.STMenu.list()}" multiple="multiple" optionKey="id" size="5" value="${STMenuGroupInstance?.stMenu*.id}" class="many-to-many"/>
+</div>
+

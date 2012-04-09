@@ -12,15 +12,17 @@ class STMenu implements Serializable {
 	int menuOrder
 	Authorities authority
 	String menuPath
-	String parentMenu
 	String action
 	String controller
 
+	static belongsTo = [parentMenu:STMenu]
+	
 	static mapping = { table 'sys_t_menu' 
-					   orderBy :['menuOrder','menuCode','packageName']
-					   
+					   sort menuOrder:"asc"
+					   parentMenu lazy:false
 					   }
-
+	
+	
 	static constraints = {
 		menuCode unique:true,nullable:false
 		menuPath nullable:true

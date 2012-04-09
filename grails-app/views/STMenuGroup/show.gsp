@@ -42,6 +42,17 @@
 				</li>
 				</g:if>
 			
+				<g:if test="${STMenuGroupInstance?.stMenu}">
+				<li class="fieldcontain">
+					<span id="stMenu-label" class="property-label"><g:message code="STMenuGroup.stMenu.label" default="St Menu" /></span>
+					
+						<g:each in="${STMenuGroupInstance.stMenu}" var="s">
+						<span class="property-value" aria-labelledby="stMenu-label"><g:link controller="STMenu" action="show" id="${s.id}">${s?.encodeAsHTML()}</g:link></span>
+						</g:each>
+					
+				</li>
+				</g:if>
+			
 			</ol>
 			<g:form>
 				<fieldset class="buttons">
