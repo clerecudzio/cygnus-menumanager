@@ -13,7 +13,7 @@ Dual licensed under the MIT (filamentgroup.com/examples/mit-license.txt) and GPL
 
 var allUIMenus = [];
 
-$.fn.menu = function(options){
+$.fn.menuize = function(options){
 	var caller = this;
 	var options = options;
 	var m = new Menu(caller, options);	
@@ -23,11 +23,15 @@ $.fn.menu = function(options){
 	.mousedown(function(){
 		if (!m.menuOpen) { m.showLoading(); };
 	})	
-	.click(function(){
+	.mouseover(function(){
 		if (m.menuOpen == false) { m.showMenu(); }
 		else { m.kill(); };
 		return false;
-	});	
+	})
+	
+	;	
+	
+	
 };
 
 function Menu(caller, options){
@@ -329,7 +333,7 @@ Menu.prototype.drilldown = function(container, options) {
 		el.css({ height: options.maxHeight });
 	};
 	
-	var resetChildMenu = function(el){ el.removeClass('fg-menu-scroll').removeClass('fg-menu-current').height('auto'); };
+	var resetChildMenu = function(el){ el.removeClass('fg-menu-scroll').removeClass('fg-menu-current').height(options.maxHeight); };
 	
 	this.resetDrilldownMenu = function(){
 		$('.fg-menu-current').removeClass('fg-menu-current');

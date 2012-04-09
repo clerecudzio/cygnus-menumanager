@@ -56,7 +56,7 @@ class CygnusMenuManagerBootStrap {
 				**/
 				menuGroup.addToStMenu(new STMenu(menuCode:'home',controller: '',action:'#',packageName:'#',menuOrder:1))
 				.save(failOnError:true)
-				leftMenuGroup.addToStMenu(new STMenu(menuCode:'management',controller: '',action:'#',packageName:'#',menuOrder:3).save(failOnError:true))
+				menuGroup.addToStMenu(new STMenu(menuCode:'management',controller: '',action:'#',packageName:'#',menuOrder:3).save(failOnError:true))
 				.save(failOnError:true)
 				
 				new STMenu(menuCode:'userManagement',controller: '',action:'#',packageName:'#',menuOrder:3,parentMenu:STMenu.findByMenuCode('management')).save(failOnError:true)
@@ -66,7 +66,7 @@ class CygnusMenuManagerBootStrap {
 				menuGroup.addToStMenu(new STMenu(menuCode:'systemConfiguration',controller: '',action:'#',packageName:'#',menuOrder:2).save(failOnError:true))
 				.save(failOnError:true)
 				
-				menuGroup.addToStMenu(new STMenu(menuCode:'about',controller: '',action:'',packageName:'#',menuOrder:3).save(failOnError:true))
+				menuGroup.addToStMenu(new STMenu(menuCode:'about',controller: '',action:'',packageName:'#',menuOrder:5).save(failOnError:true))
 				.save(failOnError:true)
 				menuGroup.addToStMenu(new STMenu(menuCode:'notAssigned',controller: '',action:'',packageName:'#',menuOrder:4).save(failOnError:true))
 				.save(failOnError:true)

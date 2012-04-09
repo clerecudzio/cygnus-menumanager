@@ -10,8 +10,8 @@
 <title><g:message code="default.list.label" args="[entityName]" /></title>
 </head>
 <body>
-	<div id="leftMenu" style="z-index:9999;">
-		<g:include controller="generateMenu" params="[pos:'left']" />
+	<div id="leftMenu"  style="position:relative; ">
+		<g:include controller="generateMenu" action="generateOnScreenMenu" params="[pos:'left',menuCode:entityName]" />
 	</div>
 	<g:formRemote name="showSearchForm" update="pageContent"
 		url="[controller:'STMenu', action:'cygnusFilteredSearch']">

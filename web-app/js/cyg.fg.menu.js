@@ -6,9 +6,9 @@ $(function(){
     	);
     	
     	// MENUS    	
-		$('#hierarchy').menu({
+		$('#hierarchy').menuize({
 			content: $('#hierarchy').next().html(),
-			crumbDefaultText: ' '
+			backLink: false
 		});
 		
 	

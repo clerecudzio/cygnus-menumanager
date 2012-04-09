@@ -16,6 +16,14 @@ class GenerateMenuController {
 		
 	}
 	
+	def generateOnScreenMenu(){
+		def currentMenu = STMenu.findByMenuCode(params.menuCode)
+		def parentMenu = currentMenu.parentMenu
+		def result = STMenu.findAllByParentMenu(parentMenu)
+		render(view:'showHeaderLeft',model:[HeaderMenuList:result])
+		
+	}
+	
 	
 	
 	def showDetailTop(){
