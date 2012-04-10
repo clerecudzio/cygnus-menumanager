@@ -17,6 +17,7 @@ class GenerateMenuController {
 	}
 	
 	def generateOnScreenMenu(){
+		log.info "generate on screen menu ${params}"
 		def currentMenu = STMenu.findByMenuCode(params.menuCode)
 		def parentMenu = currentMenu.parentMenu
 		def result = STMenu.findAllByParentMenu(parentMenu)

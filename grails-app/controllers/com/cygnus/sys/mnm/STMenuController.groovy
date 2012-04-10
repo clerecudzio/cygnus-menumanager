@@ -1,14 +1,11 @@
 package com.cygnus.sys.mnm
 
-import grails.converters.JSON
-
-import org.apache.jasper.compiler.Node.ParamsAction;
 import org.springframework.dao.DataIntegrityViolationException
 
 class STMenuController {
 	def universalSearchService
     static allowedMethods = [save: "POST", update: "POST", delete: "POST"]
-	def JSONUtilService
+
     def index() {
         redirect(action: "list", params: params)
     }
@@ -103,16 +100,6 @@ class STMenuController {
             redirect(action: "show", id: params.id)
         }
     }
-	
-	/**
-	 * Required in ReportController
-	 */
-	def listMenuCodeAsJson = {
-		def result = STMenu.withCriteria{
-			ilike 'menuCode', params.term + '%'
-		}
-		render JSONUtilService.transformToStandardizedJSONFormat(result,['id','menuCode','menuCode'],['controller']) as JSON
-	}
 	
 	def cygnusFilteredSearch(){
 		params.max = Math.min(params.max ? params.int('max') : 10, 100)

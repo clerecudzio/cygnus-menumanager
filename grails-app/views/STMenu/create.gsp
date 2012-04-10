@@ -6,6 +6,7 @@
 		<meta name="layout" content="cygnus-forms">
 		<g:set var="entityName" value="${message(code: 'STMenu.label', default: 'STMenu')}" />
 		<title><g:message code="default.create.label" args="[entityName]" /></title>
+		<parameter name="pageEName" value="STMenu" />
 	</head>
 	<body>
 		<a href="#create-STMenu" class="skip" tabindex="-1"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
