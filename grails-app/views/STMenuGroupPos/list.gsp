@@ -8,6 +8,7 @@
 		<g:set var="entityName" value="${message(code: 'STMenuGroupPos.label', default: 'STMenuGroupPos')}" />
 		<title><g:message code="default.list.label" args="[entityName]" /></title>
 		<parameter name="pageEName" value="STMenuGroupPos" />
+		
 	</head>
 	<body>
 		<a href="#list-STMenuGroupPos" class="skip" tabindex="-1"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
@@ -47,10 +48,10 @@
 			
 			<div class="pagination">
 			<g:if test="${params.action == 'list' }">
-				<g:paginate total="STMenuGroupPosInstanceTotal}" />
+				<g:paginate total="{STMenuGroupPosInstanceTotal}" />
 			</g:if>
 			<g:else>
-				<g:paginate total="STMenuGroupPosInstanceTotal}"
+				<g:paginate total="{STMenuGroupPosInstanceTotal}"
 					action="cygnusFilteredSearch"
 					params="${params}"
 					max="${params.max}"/>

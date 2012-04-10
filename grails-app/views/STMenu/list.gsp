@@ -10,6 +10,15 @@
 		<parameter name="pageEName" value="STMenu" />
 	</head>
 	<body>
+	<g:formRemote name="showSearchForm" update="pageContent"
+		url="[controller:'STMenu', action:'cygnusFilteredSearch']">
+		<g:include action="generateSearch" controller="universalSearch"
+			params="[dcName:'STMenu',
+					strings:[01:['menuCode','controller'],
+							 02:['parentMenu','menuPath']],
+					string:[01:['packageName']]
+							]" />
+	</g:formRemote>
 		<a href="#list-STMenu" class="skip" tabindex="-1"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
 		<div class="nav" role="navigation">
 			<ul>
@@ -63,7 +72,7 @@
 			
 			<div class="pagination">
 			<g:if test="${params.action == 'list' }">
-				<g:paginate total="STMenuInstanceTotal}" />
+				<g:paginate total="{STMenuInstanceTotal}" />
 			</g:if>
 			<g:else>
 				<g:paginate total="STMenuInstanceTotal}"
